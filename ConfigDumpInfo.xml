@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" format="Hierarchical" version="2.16">
+	<ConfigVersions>
+		<Metadata name="Configuration.КалендарьБронированияПереговорных" version="1"/>
+		<Metadata name="Subsystem.Бронирование" version="1"/>
+		<Metadata name="Catalog.ПереговорныеКомнаты" version="1"/>
+		<Metadata name="Document.БронированиеПереговорной" version="1"/>
+		<Metadata name="DataProcessor.КалендарьПереговорных" version="1"/>
+		<Metadata name="Language.Русский" version="1"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

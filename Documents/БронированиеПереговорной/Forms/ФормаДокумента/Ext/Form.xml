@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:form="http://v8.1c.ru/8.2/managed-application/form" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AutoCommandBar>
+		<CurrentRowUse>DontUse</CurrentRowUse>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ПриСозданииНаСервере">ПриСозданииНаСервере</Event>
+		<Event name="ПослеЗаписи">ПослеЗаписи</Event>
+	</Events>
+	<AutoTitle>true</AutoTitle>
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Бронирование переговорной</v8:content>
+		</v8:item>
+	</Title>
+	<ChildItems>
+		<InputField id="1">
+			<Name>Комната</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комната</v8:content>
+				</v8:item>
+			</Title>
+			<DataPath>Объект.Комната</DataPath>
+		</InputField>
+		<InputField id="2">
+			<Name>ДатаНачала</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<DataPath>Объект.ДатаНачала</DataPath>
+			<Events>
+				<Event name="ПриИзменении">ДатаНачалаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField id="3">
+			<Name>ДатаОкончания</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания</v8:content>
+				</v8:item>
+			</Title>
+			<DataPath>Объект.ДатаОкончания</DataPath>
+		</InputField>
+		<InputField id="4">
+			<Name>Тема</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тема</v8:content>
+				</v8:item>
+			</Title>
+			<DataPath>Объект.Тема</DataPath>
+		</InputField>
+		<InputField id="5">
+			<Name>Организатор</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организатор</v8:content>
+				</v8:item>
+			</Title>
+			<DataPath>Объект.Организатор</DataPath>
+			<ReadOnly>true</ReadOnly>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute>
+			<Name>Объект</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<id>0</id>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentObject.БронированиеПереговорной</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+</form:Form>

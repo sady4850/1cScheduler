@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Document uuid="d1e2f3a4-b5c6-4d7e-8f9a-0b1c2d3e4f5a">
+		<Properties>
+			<Name>БронированиеПереговорной</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бронирование переговорной</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<InputByString>Document.БронированиеПереговорной.StandardAttribute.Number</InputByString>
+			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
+			<SearchStringModeOnInputByString>Beginning</SearchStringModeOnInputByString>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultObjectForm>Document.БронированиеПереговорной.Form.ФормаДокумента</DefaultObjectForm>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<Posting>Allow</Posting>
+			<RealTimePosting>Allow</RealTimePosting>
+			<NumberType>String</NumberType>
+			<NumberLength>11</NumberLength>
+			<NumberPeriodicity>Year</NumberPeriodicity>
+			<CheckUnique>true</CheckUnique>
+			<Autonumbering>true</Autonumbering>
+			<Numerator/>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b">
+				<Properties>
+					<Name>Комната</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комната</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d7p1:CatalogRef.ПереговорныеКомнаты</v8:Type>
+					</Type>
+					<ToolTip/>
+					<MinValue xsi:type="xs:undefined"/>
+					<MaxValue xsi:type="xs:undefined"/>
+					<FillChecking>ShowError</FillChecking>
+					<FillValue xsi:type="xs:undefined"/>
+					<Indexing>Index</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="f1a2b3c4-d5e6-4f7a-8b9c-1d2e3f4a5b6c">
+				<Properties>
+					<Name>ДатаНачала</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата начала</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+					<ToolTip/>
+					<MinValue xsi:type="xs:undefined"/>
+					<MaxValue xsi:type="xs:undefined"/>
+					<FillChecking>ShowError</FillChecking>
+					<FillValue xsi:type="xs:undefined"/>
+					<Indexing>Index</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="a2b3c4d5-e6f7-4a8b-9c0d-1e2f3a4b5c6d">
+				<Properties>
+					<Name>ДатаОкончания</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата окончания</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+					<ToolTip/>
+					<MinValue xsi:type="xs:undefined"/>
+					<MaxValue xsi:type="xs:undefined"/>
+					<FillChecking>ShowError</FillChecking>
+					<FillValue xsi:type="xs:undefined"/>
+					<Indexing>Index</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="b3c4d5e6-f7a8-4b9c-0d1e-2f3a4b5c6d7e">
+				<Properties>
+					<Name>Тема</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тема</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<ToolTip/>
+					<MinValue xsi:type="xs:undefined"/>
+					<MaxValue xsi:type="xs:undefined"/>
+					<FillChecking>DontCheck</FillChecking>
+					<FillValue xsi:type="xs:string"/>
+					<FullTextSearch>Use</FullTextSearch>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="c4d5e6f7-a8b9-4c0d-1e2f-3a4b5c6d7e8f">
+				<Properties>
+					<Name>Организатор</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организатор</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<ToolTip/>
+					<MinValue xsi:type="xs:undefined"/>
+					<MaxValue xsi:type="xs:undefined"/>
+					<FillChecking>DontCheck</FillChecking>
+					<FillValue xsi:type="xs:string"/>
+					<FullTextSearch>Use</FullTextSearch>
+				</Properties>
+			</Attribute>
+			<Form uuid="d5e6f7a8-b9c0-4d1e-2f3a-4b5c6d7e8f9a">
+				<Properties>
+					<Name>ФормаДокумента</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма документа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<FormType>Managed</FormType>
+					<IncludeHelpInContents>false</IncludeHelpInContents>
+					<UsePurposes>
+						<v8:ref>PersonalComputer</v8:ref>
+					</UsePurposes>
+				</Properties>
+			</Form>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>

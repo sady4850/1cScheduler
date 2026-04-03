@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:form="http://v8.1c.ru/8.2/managed-application/form" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AutoCommandBar>
+		<CurrentRowUse>DontUse</CurrentRowUse>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ПриСозданииНаСервере">ПриСозданииНаСервере</Event>
+		<Event name="ОбработкаОповещения">ОбработкаОповещения</Event>
+	</Events>
+	<AutoTitle>true</AutoTitle>
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Календарь переговорных</v8:content>
+		</v8:item>
+	</Title>
+	<ChildItems>
+		<UsualGroup id="100">
+			<Name>ПанельНавигации</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель навигации</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ChildItems>
+				<Button id="101">
+					<Name>Назад</Name>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;</v8:content>
+						</v8:item>
+					</Title>
+					<CommandName>Form.Command.КомандаНазад</CommandName>
+				</Button>
+				<InputField id="102">
+					<Name>ДатаКалендаря</Name>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<DataPath>ДатаКалендаря</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Events>
+						<Event name="ПриИзменении">ДатаКалендаряПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button id="103">
+					<Name>Вперед</Name>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<CommandName>Form.Command.КомандаВперед</CommandName>
+				</Button>
+				<Button id="104">
+					<Name>Сегодня</Name>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сегодня</v8:content>
+						</v8:item>
+					</Title>
+					<CommandName>Form.Command.КомандаСегодня</CommandName>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<SpreadSheetDocumentField id="200">
+			<Name>ТабДок</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличный документ</v8:content>
+				</v8:item>
+			</Title>
+			<DataPath>ТабДок</DataPath>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<ShowTitle>false</ShowTitle>
+			<Edit>false</Edit>
+			<ShowGrid>false</ShowGrid>
+			<ShowHeaders>false</ShowHeaders>
+			<Events>
+				<Event name="ОбработкаРасшифровки">ТабДокОбработкаРасшифровки</Event>
+			</Events>
+		</SpreadSheetDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute>
+			<Name>ДатаКалендаря</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата календаря</v8:content>
+				</v8:item>
+			</Title>
+			<id>1</id>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute>
+			<Name>ТабДок</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличный документ</v8:content>
+				</v8:item>
+			</Title>
+			<id>2</id>
+			<Type>
+				<v8:Type>v8ui:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command>
+			<Name>КомандаНазад</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;</v8:content>
+				</v8:item>
+			</Title>
+			<id>1</id>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий день</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<common>true</common>
+			</Use>
+			<Action>КомандаНазад</Action>
+		</Command>
+		<Command>
+			<Name>КомандаВперед</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<id>2</id>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующий день</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<common>true</common>
+			</Use>
+			<Action>КомандаВперед</Action>
+		</Command>
+		<Command>
+			<Name>КомандаСегодня</Name>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегодня</v8:content>
+				</v8:item>
+			</Title>
+			<id>3</id>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на сегодня</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<common>true</common>
+			</Use>
+			<Action>КомандаСегодня</Action>
+		</Command>
+	</Commands>
+</form:Form>
